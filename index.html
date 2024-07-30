@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="portrait.css" media="screen and (orientation:portrait)"/>
+    <link rel="stylesheet" type="text/css" href="landscape.css" media="screen and (orientation:landscape)"/>
+    <link id="favicon-link" rel="icon" type="image/x-icon" href="">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+
+<body>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h3>Hi, my name is</h3>
+            <h1>Jack Lafond</h1>
+            <h5>Data Science, Analysis, Visualization</h5>
+        </div>
+    </div>
+
+    <main>
+
+        <nav>
+            <ul>
+                <li><a href="#About" class="navlink" id="leftnav">About</a></li>
+                <li><a href="#Skills" class="navlink">Skills</a></li>
+                <li><a href="#Experience" class="navlink">Experience</a></li>
+                <li><a href="#Projects" class="navlink">Projects</a></li>
+                <li><a href="#Contact" class="navlink" id="rightnav">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="section-container">
+
+            <div class="section" id="About">
+
+                <h3>About</h3>
+
+                <p>
+                    My name is Jack, I am based in Worcester, MA. I graduated with a Bachelor's Degree in Data Science from Worcester Polytechnic Institute (WPI). I enjoy all things statistics, mathematics, and programming, and I strive to never stop learning new things. Thanks to my experiences at WPI and in professional settings, I thrive in team environments. 
+                </p>
+
+            </div>
+
+            <div class="section" id="Skills">
+
+                <h3>Skills</h3>
+
+                <div class="horizontal-holder">
+
+                    <div class="horizontal-section">
+                        <h5>Languages</h5>
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>PL/SQL</li>
+                            <li>Javascript</li>
+                        </ul>
+                    </div>
+
+                    <div class="horizontal-section">
+                        <h5>Data Utility</h5>
+                        <ul>
+                            <li>D3</li>
+                            <li>PowerBI</li>
+                            <li>PyTorch</li>
+                            <li>SKLearn</li>
+                            <li>Matplotlib</li>
+                            <li>Hadoop</li>
+                            <li>PySpark</li>
+                        </ul>
+                    </div>
+
+                    <div class="horizontal-section">
+                        <h5>Project Development</h5>
+                        <ul>
+                            <li>Agile Methods</li>
+                            <li>Git/Github</li>
+                            <li>Jira</li>
+                        </ul>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div class="section" id="Experience">
+
+                <h3>Experience</h3>
+
+                <div class="experience">
+                    <div class="horizontal-holder">
+                        <h5>MQP - Fidelity Investments</h5>
+                        <h5>Oct 2023 - Dec 2023</h5>
+                    </div>
+
+                    <p>I worked with Fidelity Investments for my MQP(Major Qualifying Project). For this project I worked in a three person Agile development team where we were tasked with developing a data exploration and analysis application focused on Fidelity's customer base. Our application featured an interactive map with extensive drill down capabilities, interactive data visualizations, and regression analyses investigating the relationship between various customer attributes and business performance. The packages we used include Streamlit, Folium, Pandas, Plotly, and Scikit-Learn.</p>
+
+                    <div class="horizontal-list">
+                        <h7>Python</h7>
+                        <h7>Data Viz</h7>
+                        <h7>Data Analysis</h7>
+                        <h7>Agile</h7>
+                        <h7>Pandas</h7>
+                        <h7>Plotly</h7>
+                        <h7>SKLearn</h7>
+                        <h7>Streamlit</h7>
+                        <h7>Folium</h7>
+                    </div>
+                </div>
+
+                <div class="experience">
+                    <div class="horizontal-holder">
+                        <h5>IT Intern - Intact Insurance</h5>
+                        <h5>May 2023 - Aug 2023</h5>
+                    </div>
+
+                    <p>I worked with the web development team to help modernize their software development process. I developed a proof of concept system with a Spring-based API, Maven integration and an Angular front end. By the end of my internship I was able to provide reports showing how their systems could be modernized using my system as an example. During my time at Intact I was also able to receive various Google Apigee certifications. The overall technology stack included Java, Angular, Spring, Maven, Github, VS Code, and IBM RAD.</p>
+
+                    <div class="horizontal-list">
+                        <h7>Java</h7>
+                        <h7>Angular</h7>
+                        <h7>REST</h7>
+                        <h7>Agile</h7>
+                        <h7>Maven</h7>
+                        <h7>Spring</h7>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="section" id="Projects">
+
+                <h3>Projects</h3>
+                
+            </div>
+
+            <div class="section" id="Contact">
+
+                <h3>Contact</h3>
+                
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+<script>
+
+    function makeFavicon() {
+
+        let canvas = document.createElement('canvas');
+        canvas.width = 16;
+        canvas.height = 16;
+
+        let ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#222222';
+        ctx.fillRect(0, 0, 16, 16);
+
+        let ctx2 = canvas.getContext("2d");
+        ctx2.fillStyle = '#6878DE';
+        ctx2.font = "bold 10px Helvetica";
+        ctx2.fillText("JL", 2, 12);
+
+        let link = document.getElementById("favicon-link");
+        link.href = canvas.toDataURL("image/x-icon");
+
+    }
+
+    function updateNav() {
+
+        document.querySelectorAll("nav a").forEach((link) =>
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                document.querySelectorAll("nav a").forEach((link) => link.classList.remove("active"));
+                this.classList.add("active");
+                window.location.href = this.href;
+            })
+        );
+    }
+
+    function addScrollListen() {
+
+        let links = document.querySelectorAll("nav .navlink");
+        let sections = document.querySelectorAll("main .section-container .section");
+
+        window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY - 50;
+
+            links.forEach(link => {
+                let section = document.querySelector(link.hash);
+
+                if (
+                    section.offsetTop <= fromTop + window.innerHeight/2 &&
+                    section.offsetTop + section.offsetHeight > fromTop + window.innerHeight/2
+                ) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+        });
+
+    }
+
+    window.onload = () => {
+        makeFavicon();
+        updateNav();
+        addScrollListen();
+    }
+
+</script>
+
+</html>
