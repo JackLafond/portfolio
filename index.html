@@ -208,7 +208,7 @@
 
     function addScrollListen() {
 
-        let links = document.querySelectorAll("nav .navlink");
+        let links = document.querySelectorAll("nav li a");
         let sections = document.querySelectorAll("main .section-container .section");
 
         window.addEventListener("scroll", event => {
@@ -219,7 +219,7 @@
 
                 if (
                     section.offsetTop <= fromTop + window.innerHeight/2 &&
-                    section.offsetTop + section.offsetHeight > fromTop + window.innerHeight/2
+                    section.offsetTop + section.offsetHeight > fromTop + window.innerHeight/4
                 ) {
                     link.classList.add("active");
                 } else {
