@@ -29,7 +29,7 @@ main {
 
 .hero-content {
     display: flex;
-    margin: auto auto auto 20%;
+    margin: auto 20% auto 20%;
     flex-direction:column;
     text-align: left;
     justify-content: center;
@@ -78,7 +78,7 @@ main h5 {
 
 p {
     line-height: 1.6;
-    font-size: 24px;
+    font-size: 1.5em;
     padding-left: 1em;
     border-left: solid 2px #6878DE;
 }
@@ -105,7 +105,7 @@ nav ul {
 }
 
 nav li {
-    padding: 20px 0;
+    padding: 1.5em 0;
     color: #F2F2F2;
 }
 
@@ -115,7 +115,7 @@ nav a {
     list-style-type: none;
     color: #F2F2F2;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 1.5em;
     vertical-align: middle;
     border-bottom: solid 2px #222222;
 }
@@ -183,6 +183,6 @@ nav li a.active {
 }
 
 .experience p {
-    font-size: 18px;
+    font-size: 1.5em;
 }
 
