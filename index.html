@@ -211,6 +211,8 @@
 
     function updateNav() {
 
+        window.location.href = '#';
+
         document.querySelectorAll("nav a").forEach((link) =>
             link.addEventListener("click", function (event) {
                 event.preventDefault();
@@ -227,7 +229,8 @@
         let sections = document.querySelectorAll("main .section-container .section");
 
         window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY - 50;
+
+            let fromTop = window.scrollY - 50;
 
             links.forEach(link => {
                 let section = document.querySelector(link.hash);
