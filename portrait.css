@@ -17,20 +17,20 @@ main {
 }
 
 .solid {
-    height: 10vh;
+    height: 50svh;
     width: 100%;
     background: #f2f2f2c4;
     position: fixed;
-    top: 90dvh;
+    top: 80svh;
     z-index: 50;
 }
 
 .gradient {
-    height: 10vh;
+    height: 20svh;
     width: 100%;
     background:linear-gradient(rgba(255, 255, 255, 0), #f2f2f2c4);
     position: fixed;
-    top: 80dvh;
+    top: 60svh;
     z-index: 50;
 }
 
@@ -111,8 +111,8 @@ p {
 }
 
 nav {
-    top: 90dvh;
-    height: 5vh;
+    top: 80svh;
+    height: 5svh;
     background-color: #222222; 
     overflow-x: hidden;
     display: flex;
