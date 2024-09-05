@@ -17,20 +17,20 @@ main {
 }
 
 .solid {
-    height: 50svh;
+    height: 20lvh;
     width: 100%;
     background: #f2f2f2c4;
     position: fixed;
-    top: 80svh;
+    top: 90dvh;
     z-index: 50;
 }
 
 .gradient {
-    height: 20svh;
+    height: 10lvh;
     width: 100%;
     background:linear-gradient(rgba(255, 255, 255, 0), #f2f2f2c4);
     position: fixed;
-    top: 60svh;
+    top: 80dvh;
     z-index: 50;
 }
 
@@ -42,9 +42,9 @@ main {
     margin: auto;
     justify-content: center;
     text-align: center;
-    height: 85dvh;
+    height: 85lvh;
     border-radius: 0 0 1em 1em;
-    margin-bottom: 5dvh;
+    margin-bottom: 5lvh;
     z-index: 100;
     position:relative;
 }
@@ -111,8 +111,8 @@ p {
 }
 
 nav {
-    top: 80svh;
-    height: 5svh;
+    top: 90dvh;
+    height: 5lvh;
     background-color: #222222; 
     overflow-x: hidden;
     display: flex;

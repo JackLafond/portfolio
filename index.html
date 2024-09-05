@@ -20,13 +20,13 @@
         </div>
     </div>
 
-    <div class="solid"></div>
+    <div id='solid' class="solid"></div>
 
-    <div class="gradient"></div>
+    <div id='gradient' class="gradient"></div>
 
     <main>
 
-        <nav>
+        <nav id="nav">
             <ul>
                 <li><a href="#About" class="navlink">About</a></li>
                 <li><a href="#Skills" class="navlink">Skills</a></li>
@@ -250,6 +250,28 @@
             });
         });
 
+    }
+
+    function addNavResize() {
+
+        const portrait = window.matchMedia("(orientation: portrait)").matches;
+
+        if(portrait) {
+            window.addEventListener("resize", event => {
+
+                let newH = window.innerHeight;
+
+                let nav = document.getElementById('nav');
+                nav.style.top = (newH * .9) + 'px';
+
+                let gradient = document.getElementById('gradient');
+                gradient.style.top = (newH * .7) + 'px';
+
+                let solid = document.getElementById('solid');
+                solid.style.top = (newH * .8) + 'px';
+
+            })
+        }
     }
 
     window.onload = () => {
